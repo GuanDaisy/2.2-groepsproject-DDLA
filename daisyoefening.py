@@ -1,1 +1,3 @@
-print("hallo")
+# GRRRRRRRRRRRR brahdjahfkajsa
+yo = "hai"
+print(yo)
