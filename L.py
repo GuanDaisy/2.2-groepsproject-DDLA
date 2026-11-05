@@ -1,2 +1,2 @@
 "Groepje L"
-feirh 
+print("ja")
