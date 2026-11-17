@@ -1,21 +1,35 @@
 body {
     font-family: Arial, Helvetica, sans-serif;  
     background: #f3f6f8;              
-    color: black;                   
+    color: #1e4e75;                   
     max-width: 600px;               
     margin: 0 auto;                  
     padding: 24px 16px;              
   }
   
-  /* blok met gegevens ziet er zo uit: */
-  section {
-    background: white;            
-    padding: 8px 20px;                
-    margin-bottom: 20px;         
-  }
+/* block with data */
+section {
+  background: white;
+  margin-bottom: 20px;
+  border: 2px solid #6fa2cb;
+  border-radius: 25px; /*van https://www.w3schools.com/css/css3_borders.asp  voor ronde hoeken */
+  overflow: hidden;                 /* zodat de alternating stripes in tabel verstopt blijven */
+}
+
+/*
+Source - https://stackoverflow.com/a/3084318
+Posted by Russell Dias, modified by community. See post 'Timeline' for change history
+Retrieved 2026-11-17, License - CC BY-SA 4.0
+Adapted: tr changed to p, color changed
+*/
+p:nth-child(even) {
+  background-color: #d6e2eb;
+}
   
   /* Een regel met een gegeven */
-  p { margin: 10px 0; }
+  p { margin: 10px 0; 
+    padding: 10px 20px;
+}
   
   /* De naam van het veld (zoals patient) */
-  .label { color: #5b6b78; display: inline-block; width: 150px; }
+  .label { color: #6fa2cb; display: inline-block; width: 150px; }
