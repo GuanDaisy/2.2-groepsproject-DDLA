@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <title>Patiënt Entiteit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Patiënt</h1>
+
+  <!-- persoon -->
+  <section>
+  <p><span class="label">PersoonID</span><span id="persoonid"></span></p>
+  <p><span class="label">Systeemrol</span><span id="systeemrol"></span></p>
+  <p><span class="label">Titels</span><span id="titels"></span></p>
+  <p><span class="label">Initialen</span><span id="initialen"></span></p>
+  <p><span class="label">Voornaam</span><span id="voornaam"></span></p>
+  <p><span class="label">Tussenvoegsels</span><span id="tussenvoegsels"></span></p>
+  <p><span class="label">Achternaam</span><span id="achternaam"></span></p>
+  </section>
+
+  <!-- patiënt -->
+  <section>
+  <p><span class="label">Geboortedatum</span><span id="geboortedatum"></span></p>
+  <p><span class="label">Geslacht</span><span id="geslacht"></span></p>
+  <p><span class="label">IQ</span><span id="iq"></span></p>
+  <p><span class="label">Aantekeningen</span><span id="aantekeningen"></span></p>
+  </section>
+
+  <script>
+    // Gegevens van 1 patient in constante
+    const PATIENT = {
+      "persoonid": 408,
+      "persoon": {
+        "voornaam": "Thijs",
+        "initialen": "T",
+        "tussenvoegsels": null,
+        "achternaam": "Koen",
+        "titels": null,
+        "systeemrol": 2
+      },
+      "geboortedatum": "1981-07-21",
+      "geslacht": "M",
+      "iq": 104,
+      "aantekeningen": null
+    };
+
+    // vul waarde bij deze id
+    function vul(id, waarde) {
+  if (waarde === null || waarde === undefined) {
+    document.getElementById(id).textContent = "-";
+  } else {
+    document.getElementById(id).textContent = waarde;
+  }
+}
+    // vul de velden in
+    vul("persoonid", PATIENT.persoonid);
+    vul("systeemrol", PATIENT.persoon.systeemrol);
+    vul("titels", PATIENT.persoon.titels);
+    vul("initialen", PATIENT.persoon.initialen);
+    vul("voornaam", PATIENT.persoon.voornaam);
+    vul("tussenvoegsels", PATIENT.persoon.tussenvoegsels);
+    vul("achternaam", PATIENT.persoon.achternaam);
+    vul("geboortedatum", PATIENT.geboortedatum);
+    vul("geslacht", PATIENT.geslacht);
+    vul("iq", PATIENT.iq);
+    vul("aantekeningen", PATIENT.aantekeningen);
+  </script>
+</body>
+</html>
