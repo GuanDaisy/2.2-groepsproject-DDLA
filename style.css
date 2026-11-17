@@ -27,7 +27,7 @@ p:nth-child(even) {
 }
   
   /* Een regel met een gegeven */
-  p { margin: 10px 0; 
+  p { margin: 0; 
     padding: 10px 20px;
 }
   
